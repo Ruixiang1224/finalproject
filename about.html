@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroQuest | About</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="about">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MicroQuest</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="quests.html">Quest Board</a>
+        <a href="habits.html">Habits</a>
+        <a href="about.html" aria-current="page">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="hero hero-small">
+      <h1>About MicroQuest</h1>
+      <p class="hero-subtitle">
+        A tiny gamified dashboard built as an individual coding project.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Project Goals</h2>
+      <ul class="bullet-list">
+        <li>Create a completely new website with original content and styling.</li>
+        <li>Practice working with JavaScript data structures and localStorage.</li>
+        <li>Integrate at least one external JavaScript plugin (Chart.js, SortableJS).</li>
+        <li>Experiment with a “gamified” interface to track tasks and habits.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Key Features</h2>
+      <ul class="bullet-list">
+        <li><strong>Dashboard:</strong> level, XP progress bar, and a 7-day completion chart.</li>
+        <li><strong>Quest Board:</strong> add quests, move them between columns, and drag cards with SortableJS.</li>
+        <li><strong>Habits & Streaks:</strong> predefined habits, daily check-ins, streak calculation, and a weekly bar chart.</li>
+        <li><strong>Local Storage:</strong> all quests and habits are stored in the browser, no server required.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Technical Stack</h2>
+      <ul class="bullet-list">
+        <li>HTML5 semantic structure and multi-page navigation.</li>
+        <li>Custom CSS with a dark, “HUD-like” interface and responsive layout.</li>
+        <li>Vanilla JavaScript modules for data modeling, filtering, and UI updates.</li>
+        <li>Chart.js for data visualization and SortableJS for drag-and-drop interactions.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Reflection</h2>
+      <p>
+        While building MicroQuest, I learned how to design my own data structures,
+        connect UI components to localStorage, debug plugin integration, and think about
+        user experience beyond static pages. The most challenging part was keeping the
+        code organized while supporting multiple pages, but it helped me understand
+        how a slightly more complex front-end app is structured.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with HTML, CSS, JavaScript, Chart.js, and SortableJS.</p>
+    </div>
+  </footer>
+</body>
+</html>

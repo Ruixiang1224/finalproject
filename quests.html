@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroQuest | Quest Board</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="quests">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MicroQuest</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="quests.html" aria-current="page">Quest Board</a>
+        <a href="habits.html">Habits</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="hero hero-small">
+      <h1>Quest Board</h1>
+      <p class="hero-subtitle">
+        Create, organize, and complete your quests. Drag cards between columns or use the buttons.
+      </p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Add a New Quest</h2>
+      </div>
+      <form id="quest-form" class="quest-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="quest-title">Title</label>
+            <input id="quest-title" name="title" type="text" required placeholder="Finish reading, start prototype..." />
+          </div>
+          <div class="form-field">
+            <label for="quest-category">Category</label>
+            <select id="quest-category" name="category" required>
+              <option value="Study">Study</option>
+              <option value="Project">Project</option>
+              <option value="Career">Career</option>
+              <option value="Health">Health</option>
+              <option value="Life">Life</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="quest-due">Due date</label>
+            <input id="quest-due" name="dueDate" type="date" required />
+          </div>
+          <div class="form-field">
+            <label for="quest-difficulty">Difficulty (1–5)</label>
+            <input id="quest-difficulty" name="difficulty" type="number" min="1" max="5" value="2" />
+          </div>
+          <div class="form-field">
+            <label for="quest-xp">XP reward</label>
+            <input id="quest-xp" name="xp" type="number" min="5" step="5" value="25" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="quest-notes">Notes</label>
+            <textarea id="quest-notes" name="description" rows="2"
+              placeholder="Extra details, links, or reminders..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Add Quest</button>
+      </form>
+    </section>
+
+    <section class="quest-board">
+      <div class="quest-column" data-status-column="todo">
+        <div class="quest-column-header">
+          <h2>To Do</h2>
+          <p class="muted">Ideas & upcoming tasks.</p>
+        </div>
+        <div class="quest-column-body">
+          <div class="quest-list" id="todo-column" role="list" aria-label="To do quests"></div>
+        </div>
+      </div>
+
+      <div class="quest-column" data-status-column="doing">
+        <div class="quest-column-header">
+          <h2>In Progress</h2>
+          <p class="muted">What you’re currently working on.</p>
+        </div>
+        <div class="quest-column-body">
+          <div class="quest-list" id="doing-column" role="list" aria-label="In progress quests"></div>
+        </div>
+      </div>
+
+      <div class="quest-column" data-status-column="done">
+        <div class="quest-column-header">
+          <h2>Done</h2>
+          <p class="muted">Completed quests. Nice work!</p>
+        </div>
+        <div class="quest-column-body">
+          <div class="quest-list" id="done-column" role="list" aria-label="Completed quests"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Drag cards or use the buttons to update quest status. All data is stored locally in your browser.</p>
+    </div>
+  </footer>
+</body>
+</html>

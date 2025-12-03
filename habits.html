@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroQuest | Habits & Streaks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="habits">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MicroQuest</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="quests.html">Quest Board</a>
+        <a href="habits.html" aria-current="page">Habits</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="hero hero-small">
+      <h1>Habits & Streaks</h1>
+      <p class="hero-subtitle">
+        Track tiny routines that keep you alive: study, sleep, water, and movement.
+      </p>
+    </section>
+
+    <section class="habit-grid" id="habit-grid" aria-live="polite">
+      <!-- Cards injected by JS -->
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>This Week at a Glance</h2>
+      </div>
+      <p class="muted">
+        Number of times you completed each habit in the last 7 days.
+      </p>
+      <canvas id="habitChart" width="400" height="260"></canvas>
+      <p class="chart-fallback muted" id="habit-chart-fallback" hidden>
+        Log some completions to unlock the chart.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep your streak alive one tiny habit at a time.</p>
+    </div>
+  </footer>
+</body>
+</html>
