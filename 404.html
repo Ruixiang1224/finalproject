@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | MicroQuest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MicroQuest</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="quests.html">Quest Board</a>
+        <a href="habits.html">Habits</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content" id="main-content">
+    <section class="panel" style="text-align:center; padding:2.5rem;">
+      <h1 style="font-size:2rem; margin-bottom:0.5rem;">404 – Quest Not Found</h1>
+      <p class="muted" style="font-size:1rem; margin-bottom:1.5rem;">
+        The page you seek has vanished into the void.
+      </p>
+
+      <div style="display:flex; justify-content:center; gap:1rem;">
+        <a href="index.html" class="btn-primary">Return to Dashboard</a>
+
+        <button class="btn-secondary" onclick="history.back()">
+          Go Back
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>MicroQuest – Lost pages happen even to the bravest adventurers.</p>
+    </div>
+  </footer>
+</body>
+</html>
